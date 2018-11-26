@@ -14,5 +14,7 @@ namespace ProyectoFinal.Entidades
         public int RentaId { get; set; }
         public int VideoJuegoId { get; set; }
         public decimal Importe { get; set; }
+        public decimal Pago { get; set; }
+        public decimal Devuelta { get; set; }    //Esta devuelta se refiere a devuelta de dinero
     }
 }

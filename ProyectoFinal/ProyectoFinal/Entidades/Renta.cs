@@ -13,9 +13,7 @@ namespace ProyectoFinal.Entidades
         public int RentaId { get; set; }
         public DateTime FechaRegistro { get; set; }
         public int UsuarioId { get; set; }
-        public int MiembroId { get; set; }
-        public decimal Pago { get; set; }
-        public decimal Devuelta { get; set; }    //Esta devuelta se refiere a devuelta de dinero  
+        public int MiembroId { get; set; }  
         public DateTime FechaDevuelta { get; set; }
 
         public virtual List<RentaDetalle> VideoJuegos { get; set; }
@@ -26,21 +24,17 @@ namespace ProyectoFinal.Entidades
             FechaRegistro = DateTime.Now;
             UsuarioId = 0;
             MiembroId = 0;
-            Pago = 0;
-            Devuelta = 0;
             FechaDevuelta = DateTime.Now;
             VideoJuegos = new List<RentaDetalle>();
 
         }
 
-        public Renta(int rentaId,DateTime fechaRegistro,int usuarioId,int miembroId,decimal pago,decimal devuelta,DateTime fechaDevuelta, List<RentaDetalle> videoJuegos)
+        public Renta(int rentaId,DateTime fechaRegistro,int usuarioId,int miembroId,DateTime fechaDevuelta, List<RentaDetalle> videoJuegos)
         {
             RentaId = rentaId;
             FechaRegistro = fechaRegistro;
             UsuarioId = usuarioId;
             MiembroId = miembroId;
-            Pago = pago;
-            Devuelta = devuelta;
             FechaDevuelta = fechaDevuelta;
             VideoJuegos = videoJuegos;
         }
