@@ -23,7 +23,7 @@ namespace ProyectoFinal.BLL
                 {
                     foreach (var item in renta.Detalles)
                     {
-                        contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares -= item.Cantidad;
+                        contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares = contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares - 1;
                     }
                     contexto.SaveChanges();
                     paso = true;
@@ -45,7 +45,7 @@ namespace ProyectoFinal.BLL
                 {
                     foreach (var item in renta.Detalles)
                     {
-                        contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares += item.Cantidad;
+                        contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares = contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares + 1;
                     }
                     renta.Detalles.Count();
                     contexto.renta.Remove(renta);
@@ -96,7 +96,7 @@ namespace ProyectoFinal.BLL
                 {
                     foreach (var item in renta.Detalles)
                     {
-                        contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares += item.Cantidad;
+                        contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares = contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares + 1;
                         if (!renta.Detalles.ToList().Exists(v => v.RentaId == item.RentaId))
                         {
                             item.VideoJuego = null;
@@ -105,7 +105,7 @@ namespace ProyectoFinal.BLL
                     }
                     foreach (var item in renta.Detalles)
                     {
-                        contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares -= item.Cantidad;
+                        contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares = contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares - 1;
                         var estado = item.RentaId > 0 ? EntityState.Modified : EntityState.Added;
                         contexto.Entry(item).State = estado;
                     }

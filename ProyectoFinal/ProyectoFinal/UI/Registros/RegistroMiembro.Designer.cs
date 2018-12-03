@@ -130,6 +130,7 @@
             this.Eliminarbutton.TabIndex = 34;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Guardarbutton
             // 
@@ -139,6 +140,7 @@
             this.Guardarbutton.TabIndex = 33;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Nuevobutton
             // 
@@ -148,6 +150,7 @@
             this.Nuevobutton.TabIndex = 32;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Buscarbutton
             // 
@@ -157,6 +160,7 @@
             this.Buscarbutton.TabIndex = 31;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // FechadateTimePicker
             // 
@@ -164,7 +168,7 @@
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(321, 30);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
-            this.FechadateTimePicker.Size = new System.Drawing.Size(98, 22);
+            this.FechadateTimePicker.Size = new System.Drawing.Size(119, 22);
             this.FechadateTimePicker.TabIndex = 29;
             // 
             // DirecciontextBox

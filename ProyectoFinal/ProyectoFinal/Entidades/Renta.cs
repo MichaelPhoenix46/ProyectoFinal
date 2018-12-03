@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,14 +19,13 @@ namespace ProyectoFinal.Entidades
         public decimal Devuelta { get; set; }    //Esta devuelta se refiere a devuelta de dinero
         public decimal Pago { get; set; }
 
-
-        public virtual List<RentaDetalle> Detalles { get; set; }
+        [ForeignKey("MiembroId")]
+        public virtual ICollection<RentaDetalle> Detalles { get; set; }
 
         public Renta()
         {
             this.RentaId = 0;
             this.FechaRegistro = DateTime.Now;
-            this.UsuarioId = 0;
             this.MiembroId = 0;
             this.FechaDevuelta = DateTime.Now;
             this.Devuelta = 0;
@@ -35,17 +35,12 @@ namespace ProyectoFinal.Entidades
 
         }
 
-        public Renta(int rentaId, DateTime fechaRegistro, int usuarioId, int miembroId, DateTime fechaDevuelta,decimal devuelta,decimal pago, List<RentaDetalle> detalles)
+        public void AgregarDetalle(int detalleId, int rentaId, int videoJuegoId, string titulo, int cantidad, decimal importe)
         {
-            RentaId = rentaId;
-            FechaRegistro = fechaRegistro;
-            UsuarioId = usuarioId;
-            MiembroId = miembroId;
-            FechaDevuelta = fechaDevuelta;
-            Devuelta = devuelta;
-            Pago = pago;
-            Detalles = detalles;
+            Detalles.Add(new RentaDetalle(detalleId, rentaId, videoJuegoId, titulo, importe));
         }
+
+
     }
 
 

@@ -141,13 +141,13 @@ namespace ProyectoFinal.UI.Registros
             int.TryParse(JuegonumericUpDown.Text, out id);
             if (!ExiteEnLaBaseDeDatos())
             {
-                videoJuegoserrorProvider.SetError(JuegonumericUpDown, "Este Usuario No Exite");
+                videoJuegoserrorProvider.SetError(JuegonumericUpDown, "Este Juego No Exite");
                 JuegonumericUpDown.Focus();
                 return;
             }
             if (repositorio.Eliminar(id))
             {
-                MessageBox.Show("Usuario Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Juego Eliminado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiar();
             }
             else
