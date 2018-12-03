@@ -31,11 +31,10 @@ namespace ProyectoFinal.Entidades
             Lanzamiento = DateTime.Now;
             Genero = string.Empty;
             FechaRegistro = DateTime.Now;
-            Desarrolladores = string.Empty;
             CantidadEjemplares = 0;
         }
 
-        public VideoJuego(int videoJuegoId, string titulo, string descripcion, string plataforma, DateTime lanzamiento, string genero, DateTime fchaRegistro, string desarrolladores, int cantidadEjemplares)
+        public VideoJuego(int videoJuegoId, string titulo, string descripcion, string plataforma, DateTime lanzamiento, string genero, DateTime fchaRegistro, int cantidadEjemplares)
         {
             VideoJuegoId = videoJuegoId;
             Titulo = titulo;
@@ -44,7 +43,6 @@ namespace ProyectoFinal.Entidades
             Lanzamiento = lanzamiento;
             Genero = genero;
             FechaRegistro = fchaRegistro;
-            Desarrolladores = desarrolladores;
             CantidadEjemplares = cantidadEjemplares;
         }
     }
