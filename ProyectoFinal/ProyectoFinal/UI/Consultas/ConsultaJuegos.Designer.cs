@@ -28,44 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ReporteButton = new System.Windows.Forms.Button();
             this.Consultabutton = new System.Windows.Forms.Button();
-            this.TipocomboBox = new System.Windows.Forms.ComboBox();
+            this.FiltrocomboBox = new System.Windows.Forms.ComboBox();
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Tipo = new System.Windows.Forms.Label();
             this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
+            this.LanzamientodateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker2
+            // HastadateTimePicker
             // 
-            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(228, 73);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(115, 22);
-            this.dateTimePicker2.TabIndex = 60;
+            this.HastadateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.HastadateTimePicker.Location = new System.Drawing.Point(169, 76);
+            this.HastadateTimePicker.Name = "HastadateTimePicker";
+            this.HastadateTimePicker.Size = new System.Drawing.Size(115, 22);
+            this.HastadateTimePicker.TabIndex = 60;
             // 
-            // dateTimePicker1
+            // DesdedateTimePicker
             // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(75, 73);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(115, 22);
-            this.dateTimePicker1.TabIndex = 59;
+            this.DesdedateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DesdedateTimePicker.Location = new System.Drawing.Point(16, 76);
+            this.DesdedateTimePicker.Name = "DesdedateTimePicker";
+            this.DesdedateTimePicker.Size = new System.Drawing.Size(115, 22);
+            this.DesdedateTimePicker.TabIndex = 59;
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(266, 53);
+            this.label3.Location = new System.Drawing.Point(207, 56);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 17);
@@ -77,7 +79,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(118, 53);
+            this.label1.Location = new System.Drawing.Point(59, 56);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 17);
@@ -109,24 +111,25 @@
             this.Consultabutton.TabIndex = 52;
             this.Consultabutton.Text = "Consultar";
             this.Consultabutton.UseVisualStyleBackColor = true;
+            this.Consultabutton.Click += new System.EventHandler(this.Consultabutton_Click);
             // 
-            // TipocomboBox
+            // FiltrocomboBox
             // 
-            this.TipocomboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.FiltrocomboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TipocomboBox.FormattingEnabled = true;
-            this.TipocomboBox.Items.AddRange(new object[] {
+            this.FiltrocomboBox.FormattingEnabled = true;
+            this.FiltrocomboBox.Items.AddRange(new object[] {
             "id",
             "Nombre",
             "Direccion",
             "Cedula",
             "Telefono",
             "Listar Todo"});
-            this.TipocomboBox.Location = new System.Drawing.Point(42, 25);
-            this.TipocomboBox.Margin = new System.Windows.Forms.Padding(4);
-            this.TipocomboBox.Name = "TipocomboBox";
-            this.TipocomboBox.Size = new System.Drawing.Size(167, 24);
-            this.TipocomboBox.TabIndex = 50;
+            this.FiltrocomboBox.Location = new System.Drawing.Point(42, 25);
+            this.FiltrocomboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.FiltrocomboBox.Name = "FiltrocomboBox";
+            this.FiltrocomboBox.Size = new System.Drawing.Size(167, 24);
+            this.FiltrocomboBox.TabIndex = 50;
             // 
             // CriteriotextBox
             // 
@@ -174,18 +177,41 @@
             this.ConsultadataGridView.Size = new System.Drawing.Size(774, 271);
             this.ConsultadataGridView.TabIndex = 54;
             // 
+            // LanzamientodateTimePicker
+            // 
+            this.LanzamientodateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.LanzamientodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.LanzamientodateTimePicker.Location = new System.Drawing.Point(328, 76);
+            this.LanzamientodateTimePicker.Name = "LanzamientodateTimePicker";
+            this.LanzamientodateTimePicker.Size = new System.Drawing.Size(115, 22);
+            this.LanzamientodateTimePicker.TabIndex = 63;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(309, 56);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 17);
+            this.label5.TabIndex = 61;
+            this.label5.Text = "Desde Lanzamiento";
+            // 
             // ConsultaJuegos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 492);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.LanzamientodateTimePicker);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.HastadateTimePicker);
+            this.Controls.Add(this.DesdedateTimePicker);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ReporteButton);
             this.Controls.Add(this.Consultabutton);
-            this.Controls.Add(this.TipocomboBox);
+            this.Controls.Add(this.FiltrocomboBox);
             this.Controls.Add(this.CriteriotextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Tipo);
@@ -200,16 +226,18 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker HastadateTimePicker;
+        private System.Windows.Forms.DateTimePicker DesdedateTimePicker;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ReporteButton;
         private System.Windows.Forms.Button Consultabutton;
-        private System.Windows.Forms.ComboBox TipocomboBox;
+        private System.Windows.Forms.ComboBox FiltrocomboBox;
         private System.Windows.Forms.TextBox CriteriotextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Tipo;
         private System.Windows.Forms.DataGridView ConsultadataGridView;
+        private System.Windows.Forms.DateTimePicker LanzamientodateTimePicker;
+        private System.Windows.Forms.Label label5;
     }
 }

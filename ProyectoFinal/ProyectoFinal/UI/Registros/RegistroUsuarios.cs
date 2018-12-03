@@ -113,17 +113,18 @@ namespace ProyectoFinal.UI.Registros
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-
             RepositorioBase<Usuario> repositorio = new RepositorioBase<Usuario>();
             bool paso = false;
-            Usuario usuario;
+            Usuario usuario = new Usuario();
+            if (AdminradioButton.Checked == true)
+                usuario.Tipo = "Administrador";
+            else
+                usuario.Tipo = "Usuario";
             if (!Validar())
                 return;
-            usuario = new Usuario();
             usuario = LlenaClase();
             if (UsuarionumericUpDown.Value == 0)
             {
-
                 paso = repositorio.Guardar(usuario);
             }
             else
@@ -133,6 +134,10 @@ namespace ProyectoFinal.UI.Registros
                     MessageBox.Show("No Se Puede Modificar No Exite", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if (AdminradioButton.Checked == true)
+                    usuario.Tipo = "Administrador";
+                else
+                    usuario.Tipo = "Usuario";
                 paso = repositorio.Modificar(usuario);
             }
             if (paso)
