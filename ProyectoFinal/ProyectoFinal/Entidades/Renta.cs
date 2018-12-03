@@ -20,7 +20,7 @@ namespace ProyectoFinal.Entidades
         public decimal Pago { get; set; }
         public decimal Importe { get; set; }
 
-        [ForeignKey("MiembroId")]
+        /*[ForeignKey("MiembroId")]*/
         public virtual ICollection<RentaDetalle> Detalles { get; set; }
 
         public Renta()
@@ -39,7 +39,7 @@ namespace ProyectoFinal.Entidades
 
         public void AgregarDetalle(int detalleId, int rentaId, int videoJuegoId, string titulo, int cantidad, decimal importe)
         {
-            Detalles.Add(new RentaDetalle(detalleId, rentaId, videoJuegoId, titulo));
+            Detalles.Add(new RentaDetalle(detalleId, rentaId, videoJuegoId));
 
         }
 

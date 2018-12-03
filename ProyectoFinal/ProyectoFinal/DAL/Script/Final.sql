@@ -1,1 +1,1 @@
-Create database final
+create database final

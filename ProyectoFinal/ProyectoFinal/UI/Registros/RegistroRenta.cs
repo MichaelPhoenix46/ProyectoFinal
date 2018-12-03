@@ -15,7 +15,7 @@ namespace ProyectoFinal.UI.Registros
     public partial class RegistroRenta : Form
     {
         List<RentaDetalle> Detalle = new List<RentaDetalle>();
-        VideoJuego juego;
+        
         public int Index { get; set; }
         public RegistroRenta()
         {
@@ -204,6 +204,8 @@ namespace ProyectoFinal.UI.Registros
             Index = e.RowIndex;
         }
 
+
+
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
             if (DetalledataGridView.DataSource != null)
@@ -211,8 +213,8 @@ namespace ProyectoFinal.UI.Registros
             this.Detalle.Add(new RentaDetalle(
                 0,
                 rentaId: (int)RentanumericUpDown.Value,
-                videoJuegoId: (int)JuegocomboBox.SelectedValue,
-                titulo:juego.Titulo
+                videoJuegoId: (int)JuegocomboBox.SelectedValue
+
                 ));
             RentaerrorProvider.Clear();
             CargarGrid();
@@ -221,6 +223,7 @@ namespace ProyectoFinal.UI.Registros
                 ImportetextBox.Text += Convert.ToDecimal(50);
                 
             }
+            
         }
     }
 }

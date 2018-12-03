@@ -153,6 +153,26 @@ namespace ProyectoFinal.UI.Registros
             else
                 MessageBox.Show("No se Pudo Eliminar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
+        private void Buscarbutton_Click(object sender, EventArgs e)
+        {
+            RepositorioBase<VideoJuego> repositorio = new RepositorioBase<VideoJuego>();
+            int id;
+            VideoJuego juego = new VideoJuego();
+
+            int.TryParse(JuegonumericUpDown.Text, out id);
+            juego = repositorio.Buscar(id);
+
+            if (juego != null)
+            {
+                MessageBox.Show("Miembro Encontrado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LlenarCampos(juego);
+            }
+            else
+            {
+                MessageBox.Show("Miembro no Exite", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 
