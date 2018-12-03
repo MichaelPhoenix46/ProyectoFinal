@@ -13,7 +13,7 @@ namespace ProyectoFinal.Entidades
         public int RentaId { get; set; }
         public DateTime FechaRegistro { get; set; }
         public int UsuarioId { get; set; }
-        public int MiembroId { get; set; }  
+        public int MiembroId { get; set; }
         public DateTime FechaDevuelta { get; set; }
 
         public virtual List<RentaDetalle> VideoJuegos { get; set; }
@@ -29,7 +29,7 @@ namespace ProyectoFinal.Entidades
 
         }
 
-        public Renta(int rentaId,DateTime fechaRegistro,int usuarioId,int miembroId,DateTime fechaDevuelta, List<RentaDetalle> videoJuegos)
+        public Renta(int rentaId, DateTime fechaRegistro, int usuarioId, int miembroId, DateTime fechaDevuelta, List<RentaDetalle> videoJuegos)
         {
             RentaId = rentaId;
             FechaRegistro = fechaRegistro;
@@ -40,6 +40,6 @@ namespace ProyectoFinal.Entidades
         }
     }
 
-  
+
 
 }

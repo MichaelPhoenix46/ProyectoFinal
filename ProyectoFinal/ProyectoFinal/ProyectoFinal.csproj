@@ -143,6 +143,9 @@
     <EmbeddedResource Include="UI\Registros\RegistroJuegoscs.resx">
       <DependentUpon>RegistroJuegoscs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RegistroMiembro.resx">
+      <DependentUpon>RegistroMiembro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistroUsuarios.resx">
       <DependentUpon>RegistroUsuarios.cs</DependentUpon>
     </EmbeddedResource>

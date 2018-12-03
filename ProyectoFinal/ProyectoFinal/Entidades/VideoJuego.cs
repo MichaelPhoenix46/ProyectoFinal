@@ -17,8 +17,7 @@ namespace ProyectoFinal.Entidades
         public String Plataforma { get; set; }
         public DateTime Lanzamiento { get; set; }
         public String Genero { get; set; }
-        public int CantidadJugadores{ get; set; }
-        public DateTime FechaDeRegistro { get; set; }
+        public DateTime FechaRegistro { get; set; }
         public string Desarrolladores { get; set; }
         public int CantidadEjemplares { get; set; }
 
@@ -31,13 +30,12 @@ namespace ProyectoFinal.Entidades
             Plataforma = string.Empty;
             Lanzamiento = DateTime.Now;
             Genero = string.Empty;
-            CantidadJugadores = 0;
-            FechaDeRegistro = DateTime.Now;
+            FechaRegistro = DateTime.Now;
             Desarrolladores = string.Empty;
             CantidadEjemplares = 0;
         }
 
-        public VideoJuego(int videoJuegoId, string titulo, string descripcion, string plataforma, DateTime lanzamiento, string genero,int cantidadJugadores,DateTime fechaRegistro,string desarrolladores,int cantidadEjemplares)
+        public VideoJuego(int videoJuegoId, string titulo, string descripcion, string plataforma, DateTime lanzamiento, string genero, DateTime fchaRegistro, string desarrolladores, int cantidadEjemplares)
         {
             VideoJuegoId = videoJuegoId;
             Titulo = titulo;
@@ -45,8 +43,7 @@ namespace ProyectoFinal.Entidades
             Plataforma = plataforma;
             Lanzamiento = lanzamiento;
             Genero = genero;
-            CantidadJugadores = cantidadJugadores;
-            FechaDeRegistro = fechaRegistro;
+            FechaRegistro = fchaRegistro;
             Desarrolladores = desarrolladores;
             CantidadEjemplares = cantidadEjemplares;
         }

@@ -32,7 +32,7 @@ namespace ProyectoFinal.Entidades
             FechaRegistro = DateTime.Now;
         }
 
-        public Usuario(int usuarioId, string userName, string nombre,string telefono, string cedula, string password, string tipo, DateTime fechaRegistro)
+        public Usuario(int usuarioId, string userName, string nombre, string telefono, string cedula, string password, string tipo, DateTime fechaRegistro)
         {
             UsuarioId = usuarioId;
             UserName = userName;
