@@ -19,6 +19,9 @@ namespace ProyectoFinal.Entidades
         [NotMapped]
         public decimal Importe { get; set; }
 
+        [ForeignKey("VideoJuegoId")]
+        public virtual VideoJuego VideoJuego { get; set; };
+
         public RentaDetalle(int detalleId, int rentaId, int videoJuegoId, string titulo, int cantidad, decimal importe)
         {
             DetalleId = detalleId;
@@ -33,10 +36,7 @@ namespace ProyectoFinal.Entidades
         {
             DetalleId = 0;
             RentaId = 0;
-            VideoJuegoId = 0;
-            Titulo = string.Empty;
-            Cantidad = 0;
-            Importe = 0;
+
 
         }
 

@@ -10,11 +10,11 @@ namespace ProyectoFinal.DAL
 {
     public class Contexto : DbContext
     {
-        public DbSet<Usuario> usuarios { get; set; }
-        public DbSet<Miembro> miembros { get; set; }
-        public DbSet<Renta> rentas { get; set; }
+        public DbSet<Usuario> usuario { get; set; }
+        public DbSet<Miembro> miembro { get; set; }
+        public DbSet<Renta> renta { get; set; }
         public DbSet<RentaDetalle> rentaDetalles { get; set; }
-        public DbSet<VideoJuego> videoJuegos { get; set; }
+        public DbSet<VideoJuego> videoJuego { get; set; }
 
 
         public Contexto() : base("ConStr")
