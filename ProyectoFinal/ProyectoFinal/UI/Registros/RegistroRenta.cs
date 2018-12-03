@@ -65,22 +65,16 @@ namespace ProyectoFinal.UI.Registros
         {
             bool paso = true;
 
-            if (string.IsNullOrEmpty(DescripcionTextBox.Text))
+            if (string.IsNullOrEmpty(PagotextBox.Text))
             {
-                errorProvider1.SetError(DescripcionTextBox,
-                    "Llenar Campo Descripcion");
+                RentaerrorProvider.SetError(PagotextBox,
+                    "Llenar Campo Pago");
                 paso = false;
             }
-            if (string.IsNullOrEmpty(CostotextBox.Text))
+            if (string.IsNullOrEmpty(MiembrocomboBox.Text))
             {
-                errorProvider1.SetError(CostotextBox,
-                    "Llenar Campo Articulo");
-                paso = false;
-            }
-            if (string.IsNullOrEmpty(PreciotextBox.Text))
-            {
-                errorProvider1.SetError(PreciotextBox,
-                    "Llenar Campo Precio");
+                RentaerrorProvider.SetError(MiembrocomboBox,
+                    "Llenar Campo Miembro");
                 paso = false;
             }
 
