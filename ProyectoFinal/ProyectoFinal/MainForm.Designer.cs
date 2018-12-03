@@ -39,6 +39,14 @@
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.registroDeJuegosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeMiembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeRentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registroDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaDeJuegosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaDeMiembrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaDeRentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -92,12 +100,22 @@
             // 
             // registrosToolStripMenuItem
             // 
+            this.registrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registroDeJuegosToolStripMenuItem,
+            this.registroDeMiembrosToolStripMenuItem,
+            this.registroDeRentaToolStripMenuItem,
+            this.registroDeUsuarioToolStripMenuItem});
             this.registrosToolStripMenuItem.Name = "registrosToolStripMenuItem";
             this.registrosToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.registrosToolStripMenuItem.Text = "Registros";
             // 
             // consultasToolStripMenuItem
             // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consultaDeJuegosToolStripMenuItem,
+            this.consultaDeMiembrosToolStripMenuItem,
+            this.consultaDeUsuariosToolStripMenuItem,
+            this.consultaDeRentasToolStripMenuItem});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.consultasToolStripMenuItem.Text = "Consultas";
@@ -124,6 +142,61 @@
             this.pictureBox1.Size = new System.Drawing.Size(776, 366);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // registroDeJuegosToolStripMenuItem
+            // 
+            this.registroDeJuegosToolStripMenuItem.Name = "registroDeJuegosToolStripMenuItem";
+            this.registroDeJuegosToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.registroDeJuegosToolStripMenuItem.Text = "Registro de juegos";
+            this.registroDeJuegosToolStripMenuItem.Click += new System.EventHandler(this.registroDeJuegosToolStripMenuItem_Click);
+            // 
+            // registroDeMiembrosToolStripMenuItem
+            // 
+            this.registroDeMiembrosToolStripMenuItem.Name = "registroDeMiembrosToolStripMenuItem";
+            this.registroDeMiembrosToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.registroDeMiembrosToolStripMenuItem.Text = "Registro de miembros";
+            this.registroDeMiembrosToolStripMenuItem.Click += new System.EventHandler(this.registroDeMiembrosToolStripMenuItem_Click);
+            // 
+            // registroDeRentaToolStripMenuItem
+            // 
+            this.registroDeRentaToolStripMenuItem.Name = "registroDeRentaToolStripMenuItem";
+            this.registroDeRentaToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.registroDeRentaToolStripMenuItem.Text = "Registro de renta";
+            this.registroDeRentaToolStripMenuItem.Click += new System.EventHandler(this.registroDeRentaToolStripMenuItem_Click);
+            // 
+            // registroDeUsuarioToolStripMenuItem
+            // 
+            this.registroDeUsuarioToolStripMenuItem.Name = "registroDeUsuarioToolStripMenuItem";
+            this.registroDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.registroDeUsuarioToolStripMenuItem.Text = "Registro de usuario";
+            this.registroDeUsuarioToolStripMenuItem.Click += new System.EventHandler(this.registroDeUsuarioToolStripMenuItem_Click);
+            // 
+            // consultaDeJuegosToolStripMenuItem
+            // 
+            this.consultaDeJuegosToolStripMenuItem.Name = "consultaDeJuegosToolStripMenuItem";
+            this.consultaDeJuegosToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.consultaDeJuegosToolStripMenuItem.Text = "Consulta de juegos";
+            this.consultaDeJuegosToolStripMenuItem.Click += new System.EventHandler(this.consultaDeJuegosToolStripMenuItem_Click);
+            // 
+            // consultaDeMiembrosToolStripMenuItem
+            // 
+            this.consultaDeMiembrosToolStripMenuItem.Name = "consultaDeMiembrosToolStripMenuItem";
+            this.consultaDeMiembrosToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.consultaDeMiembrosToolStripMenuItem.Text = "Consulta de miembros";
+            this.consultaDeMiembrosToolStripMenuItem.Click += new System.EventHandler(this.consultaDeMiembrosToolStripMenuItem_Click);
+            // 
+            // consultaDeUsuariosToolStripMenuItem
+            // 
+            this.consultaDeUsuariosToolStripMenuItem.Name = "consultaDeUsuariosToolStripMenuItem";
+            this.consultaDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.consultaDeUsuariosToolStripMenuItem.Text = "Consulta de usuarios";
+            // 
+            // consultaDeRentasToolStripMenuItem
+            // 
+            this.consultaDeRentasToolStripMenuItem.Name = "consultaDeRentasToolStripMenuItem";
+            this.consultaDeRentasToolStripMenuItem.Size = new System.Drawing.Size(233, 26);
+            this.consultaDeRentasToolStripMenuItem.Text = "Consulta de rentas";
+            this.consultaDeRentasToolStripMenuItem.Click += new System.EventHandler(this.consultaDeRentasToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -159,6 +232,14 @@
         private System.Windows.Forms.ToolStripMenuItem informacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem registroDeJuegosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDeMiembrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDeRentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroDeUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaDeJuegosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaDeMiembrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaDeUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaDeRentasToolStripMenuItem;
     }
 }
 
