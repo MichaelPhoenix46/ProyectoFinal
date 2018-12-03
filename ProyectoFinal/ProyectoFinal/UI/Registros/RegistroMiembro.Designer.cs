@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.components = new System.ComponentModel.Container();
+            this.TelefonomaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.CedulamaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -40,21 +41,23 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.DirecciontextBox = new System.Windows.Forms.TextBox();
+            this.NombretextBox = new System.Windows.Forms.TextBox();
             this.MiembronumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.MiembroerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.MiembronumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiembroerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // maskedTextBox1
+            // TelefonomaskedTextBox
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(144, 104);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox1.Mask = "(000)-000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
-            this.maskedTextBox1.TabIndex = 42;
+            this.TelefonomaskedTextBox.Location = new System.Drawing.Point(144, 104);
+            this.TelefonomaskedTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.TelefonomaskedTextBox.Mask = "(000)-000-0000";
+            this.TelefonomaskedTextBox.Name = "TelefonomaskedTextBox";
+            this.TelefonomaskedTextBox.Size = new System.Drawing.Size(100, 22);
+            this.TelefonomaskedTextBox.TabIndex = 42;
             // 
             // CedulamaskedTextBox
             // 
@@ -155,29 +158,29 @@
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // FechadateTimePicker
             // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(321, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(98, 22);
-            this.dateTimePicker1.TabIndex = 29;
+            this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechadateTimePicker.Location = new System.Drawing.Point(321, 30);
+            this.FechadateTimePicker.Name = "FechadateTimePicker";
+            this.FechadateTimePicker.Size = new System.Drawing.Size(98, 22);
+            this.FechadateTimePicker.TabIndex = 29;
             // 
-            // textBox4
+            // DirecciontextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(144, 168);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(296, 43);
-            this.textBox4.TabIndex = 27;
+            this.DirecciontextBox.Location = new System.Drawing.Point(144, 168);
+            this.DirecciontextBox.Multiline = true;
+            this.DirecciontextBox.Name = "DirecciontextBox";
+            this.DirecciontextBox.Size = new System.Drawing.Size(296, 43);
+            this.DirecciontextBox.TabIndex = 27;
             // 
-            // textBox1
+            // NombretextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(144, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(296, 22);
-            this.textBox1.TabIndex = 26;
+            this.NombretextBox.Location = new System.Drawing.Point(144, 68);
+            this.NombretextBox.Name = "NombretextBox";
+            this.NombretextBox.Size = new System.Drawing.Size(296, 22);
+            this.NombretextBox.TabIndex = 26;
             // 
             // MiembronumericUpDown
             // 
@@ -186,12 +189,16 @@
             this.MiembronumericUpDown.Size = new System.Drawing.Size(120, 22);
             this.MiembronumericUpDown.TabIndex = 25;
             // 
+            // MiembroerrorProvider
+            // 
+            this.MiembroerrorProvider.ContainerControl = this;
+            // 
             // RegistroMiembro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 319);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.TelefonomaskedTextBox);
             this.Controls.Add(this.CedulamaskedTextBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -203,20 +210,21 @@
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.Buscarbutton);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.FechadateTimePicker);
+            this.Controls.Add(this.DirecciontextBox);
+            this.Controls.Add(this.NombretextBox);
             this.Controls.Add(this.MiembronumericUpDown);
             this.Name = "RegistroMiembro";
             this.Text = "RegistroMiembro";
             ((System.ComponentModel.ISupportInitialize)(this.MiembronumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MiembroerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox TelefonomaskedTextBox;
         private System.Windows.Forms.MaskedTextBox CedulamaskedTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -228,9 +236,10 @@
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Buscarbutton;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
+        private System.Windows.Forms.TextBox DirecciontextBox;
+        private System.Windows.Forms.TextBox NombretextBox;
         private System.Windows.Forms.NumericUpDown MiembronumericUpDown;
+        private System.Windows.Forms.ErrorProvider MiembroerrorProvider;
     }
 }

@@ -16,5 +16,14 @@ namespace ProyectoFinal.UI.Registros
         {
             InitializeComponent();
         }
+        private void Limpiar()
+        {
+            MiembronumericUpDown.Value = 0;
+            NombretextBox.Text = string.Empty;
+            CedulamaskedTextBox.Text = string.Empty;
+            DirecciontextBox.Text = string.Empty;
+            TelefonomaskedTextBox.Text = string.Empty;
+            FechadateTimePicker.Value = DateTime.Now;
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,19 +38,21 @@
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TitulotextBox = new System.Windows.Forms.TextBox();
             this.JuegonumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.DescripciontextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.PlataformacomboBox = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.GenerotextBox = new System.Windows.Forms.TextBox();
             this.LanzamientodateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.CantidadnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
+            this.videoJuegoserrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.JuegonumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoJuegoserrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -96,6 +99,7 @@
             this.Eliminarbutton.TabIndex = 50;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click_1);
             // 
             // Guardarbutton
             // 
@@ -105,6 +109,7 @@
             this.Guardarbutton.TabIndex = 49;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Nuevobutton
             // 
@@ -114,6 +119,7 @@
             this.Nuevobutton.TabIndex = 48;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Buscarbutton
             // 
@@ -134,12 +140,12 @@
             this.FechadateTimePicker.TabIndex = 46;
             this.FechadateTimePicker.Value = new System.DateTime(2018, 12, 3, 6, 13, 40, 0);
             // 
-            // textBox1
+            // TitulotextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 22);
-            this.textBox1.TabIndex = 44;
+            this.TitulotextBox.Location = new System.Drawing.Point(118, 60);
+            this.TitulotextBox.Name = "TitulotextBox";
+            this.TitulotextBox.Size = new System.Drawing.Size(290, 22);
+            this.TitulotextBox.TabIndex = 44;
             // 
             // JuegonumericUpDown
             // 
@@ -157,13 +163,13 @@
             this.label1.TabIndex = 60;
             this.label1.Text = "Descripcion";
             // 
-            // textBox2
+            // DescripciontextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(123, 100);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(285, 57);
-            this.textBox2.TabIndex = 59;
+            this.DescripciontextBox.Location = new System.Drawing.Point(123, 100);
+            this.DescripciontextBox.Multiline = true;
+            this.DescripciontextBox.Name = "DescripciontextBox";
+            this.DescripciontextBox.Size = new System.Drawing.Size(285, 57);
+            this.DescripciontextBox.TabIndex = 59;
             // 
             // label8
             // 
@@ -174,10 +180,10 @@
             this.label8.TabIndex = 61;
             this.label8.Text = "Plataforma";
             // 
-            // comboBox1
+            // PlataformacomboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.PlataformacomboBox.FormattingEnabled = true;
+            this.PlataformacomboBox.Items.AddRange(new object[] {
             "Pc",
             "Ps4",
             "Xbox one",
@@ -186,10 +192,10 @@
             "Ps3",
             "Xbox 360",
             "Nintendo 3DS"});
-            this.comboBox1.Location = new System.Drawing.Point(123, 178);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(183, 24);
-            this.comboBox1.TabIndex = 62;
+            this.PlataformacomboBox.Location = new System.Drawing.Point(123, 178);
+            this.PlataformacomboBox.Name = "PlataformacomboBox";
+            this.PlataformacomboBox.Size = new System.Drawing.Size(183, 24);
+            this.PlataformacomboBox.TabIndex = 62;
             // 
             // label9
             // 
@@ -200,12 +206,12 @@
             this.label9.TabIndex = 64;
             this.label9.Text = "Genero";
             // 
-            // textBox3
+            // GenerotextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(123, 248);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 22);
-            this.textBox3.TabIndex = 63;
+            this.GenerotextBox.Location = new System.Drawing.Point(123, 248);
+            this.GenerotextBox.Name = "GenerotextBox";
+            this.GenerotextBox.Size = new System.Drawing.Size(183, 22);
+            this.GenerotextBox.TabIndex = 63;
             // 
             // LanzamientodateTimePicker
             // 
@@ -213,15 +219,15 @@
             this.LanzamientodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.LanzamientodateTimePicker.Location = new System.Drawing.Point(123, 213);
             this.LanzamientodateTimePicker.Name = "LanzamientodateTimePicker";
-            this.LanzamientodateTimePicker.Size = new System.Drawing.Size(135, 22);
+            this.LanzamientodateTimePicker.Size = new System.Drawing.Size(183, 22);
             this.LanzamientodateTimePicker.TabIndex = 65;
             // 
-            // numericUpDown1
+            // CantidadnumericUpDown
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(123, 291);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(183, 22);
-            this.numericUpDown1.TabIndex = 66;
+            this.CantidadnumericUpDown.Location = new System.Drawing.Point(123, 291);
+            this.CantidadnumericUpDown.Name = "CantidadnumericUpDown";
+            this.CantidadnumericUpDown.Size = new System.Drawing.Size(183, 22);
+            this.CantidadnumericUpDown.TabIndex = 66;
             // 
             // label5
             // 
@@ -232,20 +238,24 @@
             this.label5.TabIndex = 67;
             this.label5.Text = "Cantidad";
             // 
+            // videoJuegoserrorProvider
+            // 
+            this.videoJuegoserrorProvider.ContainerControl = this;
+            // 
             // RegistroJuegoscs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 408);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.CantidadnumericUpDown);
             this.Controls.Add(this.LanzamientodateTimePicker);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.GenerotextBox);
+            this.Controls.Add(this.PlataformacomboBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.DescripciontextBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -255,12 +265,13 @@
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.FechadateTimePicker);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TitulotextBox);
             this.Controls.Add(this.JuegonumericUpDown);
             this.Name = "RegistroJuegoscs";
             this.Text = "Registro de video juegos";
             ((System.ComponentModel.ISupportInitialize)(this.JuegonumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.videoJuegoserrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,16 +287,17 @@
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TitulotextBox;
         private System.Windows.Forms.NumericUpDown JuegonumericUpDown;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox DescripciontextBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox PlataformacomboBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox GenerotextBox;
         private System.Windows.Forms.DateTimePicker LanzamientodateTimePicker;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown CantidadnumericUpDown;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ErrorProvider videoJuegoserrorProvider;
     }
 }
