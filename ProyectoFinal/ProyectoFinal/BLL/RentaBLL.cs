@@ -23,6 +23,7 @@ namespace ProyectoFinal.BLL
                 {
                     foreach (var item in renta.Detalles)
                     {
+
                         contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares = contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares - 1;
                     }
                     contexto.SaveChanges();
@@ -138,7 +139,7 @@ namespace ProyectoFinal.BLL
             return renta;
         }
 
-        public static void UsuarioLogin(string nombre,int id)
+        public static void UsuarioLogin(string nombre, int id)
         {
             usuario.UsuarioId = id;
             usuario.Nombre = nombre;
@@ -147,5 +148,6 @@ namespace ProyectoFinal.BLL
         {
             return usuario;
         }
+
     }
 }

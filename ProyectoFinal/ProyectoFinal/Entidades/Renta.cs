@@ -18,6 +18,7 @@ namespace ProyectoFinal.Entidades
         public DateTime FechaDevuelta { get; set; }
         public decimal Devuelta { get; set; }    //Esta devuelta se refiere a devuelta de dinero
         public decimal Pago { get; set; }
+        public decimal Importe { get; set; }
 
         [ForeignKey("MiembroId")]
         public virtual ICollection<RentaDetalle> Detalles { get; set; }
@@ -30,6 +31,7 @@ namespace ProyectoFinal.Entidades
             this.FechaDevuelta = DateTime.Now;
             this.Devuelta = 0;
             this.Pago = 0;
+            this.Importe = 0;
             Detalles = new List<RentaDetalle>();
             
 
@@ -37,7 +39,8 @@ namespace ProyectoFinal.Entidades
 
         public void AgregarDetalle(int detalleId, int rentaId, int videoJuegoId, string titulo, int cantidad, decimal importe)
         {
-            Detalles.Add(new RentaDetalle(detalleId, rentaId, videoJuegoId, titulo, importe));
+            Detalles.Add(new RentaDetalle(detalleId, rentaId, videoJuegoId, titulo));
+
         }
 
 

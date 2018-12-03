@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroRenta));
             this.JuegocomboBox = new System.Windows.Forms.ComboBox();
             this.MiembrocomboBox = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DetalledataGridView = new System.Windows.Forms.DataGridView();
             this.UsuarioLabel = new System.Windows.Forms.Label();
             this.RentanumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -56,7 +56,7 @@
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.RentaerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RentanumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RentaerrorProvider)).BeginInit();
@@ -78,14 +78,14 @@
             this.MiembrocomboBox.Size = new System.Drawing.Size(121, 24);
             this.MiembrocomboBox.TabIndex = 2;
             // 
-            // dataGridView1
+            // DetalledataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 294);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(465, 150);
-            this.dataGridView1.TabIndex = 3;
+            this.DetalledataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetalledataGridView.Location = new System.Drawing.Point(12, 294);
+            this.DetalledataGridView.Name = "DetalledataGridView";
+            this.DetalledataGridView.RowTemplate.Height = 24;
+            this.DetalledataGridView.Size = new System.Drawing.Size(465, 150);
+            this.DetalledataGridView.TabIndex = 3;
             // 
             // UsuarioLabel
             // 
@@ -179,6 +179,7 @@
             this.Agregarbutton.TabIndex = 15;
             this.Agregarbutton.Text = "Agregar";
             this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
             // 
             // label4
             // 
@@ -243,6 +244,7 @@
             this.Eliminarbutton.TabIndex = 22;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // Guardarbutton
             // 
@@ -252,6 +254,7 @@
             this.Guardarbutton.TabIndex = 23;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;
+            this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Nuevobutton
             // 
@@ -261,6 +264,7 @@
             this.Nuevobutton.TabIndex = 24;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Buscarbutton
             // 
@@ -270,6 +274,7 @@
             this.Buscarbutton.TabIndex = 25;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // label8
             // 
@@ -311,12 +316,12 @@
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.RentanumericUpDown);
             this.Controls.Add(this.UsuarioLabel);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DetalledataGridView);
             this.Controls.Add(this.MiembrocomboBox);
             this.Controls.Add(this.JuegocomboBox);
             this.Name = "RegistroRenta";
             this.Text = "RegistroRenta";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RentanumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RentaerrorProvider)).EndInit();
@@ -329,7 +334,7 @@
 
         private System.Windows.Forms.ComboBox JuegocomboBox;
         private System.Windows.Forms.ComboBox MiembrocomboBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DetalledataGridView;
         private System.Windows.Forms.Label UsuarioLabel;
         private System.Windows.Forms.NumericUpDown RentanumericUpDown;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
