@@ -13,17 +13,20 @@ namespace ProyectoFinal.Entidades
         [Key]
         public int DetalleId { get; set; }
         public int RentaId { get; set; }
-        public int VideoJuegoId { get; set;  }
-        
+        public int VideoJuegoId { get; set; }
+        public string Titulo { get; set; }
+
+
 
         [ForeignKey("VideoJuegoId")]
         public virtual VideoJuego VideoJuego { get; set; }
 
-        public RentaDetalle(int detalleId, int rentaId, int videoJuegoId)
+        public RentaDetalle(int detalleId, int rentaId, int videoJuegoId,string titulo)
         {
             DetalleId = detalleId;
             RentaId = rentaId;
             VideoJuegoId = videoJuegoId;
+            Titulo = titulo;
 
         }
         public RentaDetalle()
@@ -33,6 +36,7 @@ namespace ProyectoFinal.Entidades
 
 
         }
+
 
 
     }

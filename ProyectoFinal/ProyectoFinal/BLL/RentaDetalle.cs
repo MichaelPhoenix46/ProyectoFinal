@@ -21,5 +21,7 @@ namespace ProyectoFinal.BLL
             catch (Exception) { throw; }
             return renta;
         }
+
+
     }
 }

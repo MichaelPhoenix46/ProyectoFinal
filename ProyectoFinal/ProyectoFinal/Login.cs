@@ -53,14 +53,20 @@ namespace ProyectoFinal
             }
             if ((UsertextBox.Text == "Admin") && (passtextBox.Text == "123456"))
             {
-                this.Hide();
+
+
+
                 MainForm ver = new MainForm();
                 ver.Show();
+                this.Hide();
+
+                
             }
             else
             {
                 filtrar = t => t.UserName.Equals(UsertextBox.Text);
-                // user = IRepository.GetList(filtrar);
+                RepositorioBase<Usuario> repositorio = new RepositorioBase<Usuario>();
+                user = repositorio.GetList(filtrar);
 
                 if (user.Exists(x => x.UserName == UsertextBox.Text) && user.Exists(x => x.Password == passtextBox.Text))
                 {
@@ -76,6 +82,7 @@ namespace ProyectoFinal
                     LogInerrorProvider.SetError(UsertextBox, "Incorrecto");
                 }
             }
+
            
         }
 

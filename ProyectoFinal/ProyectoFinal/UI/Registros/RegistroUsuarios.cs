@@ -18,6 +18,7 @@ namespace ProyectoFinal.UI.Registros
         {
             InitializeComponent();
             UsuarioradioButton.Checked = true;
+            
         }
 
 
@@ -48,6 +49,7 @@ namespace ProyectoFinal.UI.Registros
             NombreUstextBox.Text = usuario.UserName;
             FechadateTimePicker.Value = usuario.FechaRegistro;
             CedulamaskedTextBox.Text = usuario.Cedula;
+            ContraseñatextBox.Text = usuario.Password;
 
         }
 
@@ -61,6 +63,7 @@ namespace ProyectoFinal.UI.Registros
             usuario.UserName = NombreUstextBox.Text;
             usuario.FechaRegistro = FechadateTimePicker.Value;
             usuario.Cedula = CedulamaskedTextBox.Text;
+            usuario.Password = ContraseñatextBox.Text;
             return usuario;
         }
 
@@ -78,7 +81,7 @@ namespace ProyectoFinal.UI.Registros
                 UsuarioerrorProvider.SetError(CedulamaskedTextBox, "Campo Vacio ");
                 paso = false;
             }
-            if (string.IsNullOrWhiteSpace(NombreUstextBox.Text) || string.IsNullOrWhiteSpace(CedulamaskedTextBox.Text))
+            if (string.IsNullOrWhiteSpace(NombreUstextBox.Text) || string.IsNullOrWhiteSpace(NombreUstextBox.Text))
             {
                 UsuarioerrorProvider.SetError(NombreUstextBox, "Campo Vacio");
                 paso = false;
@@ -86,6 +89,16 @@ namespace ProyectoFinal.UI.Registros
             if (string.IsNullOrWhiteSpace(TelefonomaskedTextBox.Text) || string.IsNullOrWhiteSpace(TelefonomaskedTextBox.Text))
             {
                 UsuarioerrorProvider.SetError(TelefonomaskedTextBox, "Campo Vacio");
+                paso = false;
+            }
+            if (string.IsNullOrWhiteSpace(CedulamaskedTextBox.Text) || string.IsNullOrWhiteSpace(CedulamaskedTextBox.Text))
+            {
+                UsuarioerrorProvider.SetError(CedulamaskedTextBox, "Campo Vacio");
+                paso = false;
+            }
+            if (string.IsNullOrWhiteSpace(ContraseñatextBox.Text) || string.IsNullOrWhiteSpace(ContraseñatextBox.Text))
+            {
+                UsuarioerrorProvider.SetError(ContraseñatextBox, "Campo Vacio");
                 paso = false;
             }
             return paso;
@@ -116,15 +129,15 @@ namespace ProyectoFinal.UI.Registros
             RepositorioBase<Usuario> repositorio = new RepositorioBase<Usuario>();
             bool paso = false;
             Usuario usuario = new Usuario();
-            if (AdminradioButton.Checked == true)
-                usuario.Tipo = "Administrador";
-            else
-                usuario.Tipo = "Usuario";
             if (!Validar())
                 return;
             usuario = LlenaClase();
             if (UsuarionumericUpDown.Value == 0)
             {
+                if (AdminradioButton.Checked == true)
+                    usuario.Tipo = "Administrador";
+                else
+                    usuario.Tipo = "Usuario";
                 paso = repositorio.Guardar(usuario);
             }
             else
@@ -171,6 +184,61 @@ namespace ProyectoFinal.UI.Registros
         {
             Limpiar();
 
+        }
+
+        public static void SoloLetras(KeyPressEventArgs v)
+        {
+            if (Char.IsLetter(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (Char.IsSeparator(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (Char.IsControl(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else
+            {
+                v.Handled = true;
+            }
+        }
+
+        public static void SoloNumero(KeyPressEventArgs v)
+        {
+            if (Char.IsDigit(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (Char.IsControl(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (Char.IsSeparator(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else
+            {
+                v.Handled = true;
+                MessageBox.Show("Solo Números");
+            }
+        }
+
+        private void NombretextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloLetras(e);
+        }
+
+        private void TelefonomaskedTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumero(e);
+        }
+        private void CedulamaskedTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumero(e);
         }
     }
 }

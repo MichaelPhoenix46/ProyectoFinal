@@ -18,7 +18,6 @@ namespace ProyectoFinal.Entidades
         public DateTime Lanzamiento { get; set; }
         public String Genero { get; set; }
         public DateTime FechaRegistro { get; set; }
-        public string Desarrolladores { get; set; }
         public int CantidadEjemplares { get; set; }
 
 

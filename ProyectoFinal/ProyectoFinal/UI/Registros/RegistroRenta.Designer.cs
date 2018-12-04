@@ -38,11 +38,8 @@
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.DevueltadateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.DevueltatextBox = new System.Windows.Forms.TextBox();
-            this.PagotextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.ImportetextBox = new System.Windows.Forms.TextBox();
             this.Agregarbutton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -56,14 +53,21 @@
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.RentaerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.PagonumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.ImportenumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.DevueltanumericUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RentanumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RentaerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PagonumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImportenumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DevueltanumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // JuegocomboBox
             // 
+            this.JuegocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.JuegocomboBox.FormattingEnabled = true;
             this.JuegocomboBox.Location = new System.Drawing.Point(12, 265);
             this.JuegocomboBox.Name = "JuegocomboBox";
@@ -72,6 +76,7 @@
             // 
             // MiembrocomboBox
             // 
+            this.MiembrocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.MiembrocomboBox.FormattingEnabled = true;
             this.MiembrocomboBox.Location = new System.Drawing.Point(117, 54);
             this.MiembrocomboBox.Name = "MiembrocomboBox";
@@ -106,10 +111,11 @@
             // FechadateTimePicker
             // 
             this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechadateTimePicker.Enabled = false;
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.Location = new System.Drawing.Point(380, 26);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
-            this.FechadateTimePicker.Size = new System.Drawing.Size(97, 22);
+            this.FechadateTimePicker.Size = new System.Drawing.Size(113, 22);
             this.FechadateTimePicker.TabIndex = 7;
             // 
             // label1
@@ -124,26 +130,12 @@
             // DevueltadateTimePicker
             // 
             this.DevueltadateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.DevueltadateTimePicker.Enabled = false;
             this.DevueltadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DevueltadateTimePicker.Location = new System.Drawing.Point(131, 94);
             this.DevueltadateTimePicker.Name = "DevueltadateTimePicker";
             this.DevueltadateTimePicker.Size = new System.Drawing.Size(120, 22);
             this.DevueltadateTimePicker.TabIndex = 9;
-            // 
-            // DevueltatextBox
-            // 
-            this.DevueltatextBox.Location = new System.Drawing.Point(50, 204);
-            this.DevueltatextBox.Name = "DevueltatextBox";
-            this.DevueltatextBox.ReadOnly = true;
-            this.DevueltatextBox.Size = new System.Drawing.Size(100, 22);
-            this.DevueltatextBox.TabIndex = 10;
-            // 
-            // PagotextBox
-            // 
-            this.PagotextBox.Location = new System.Drawing.Point(173, 156);
-            this.PagotextBox.Name = "PagotextBox";
-            this.PagotextBox.Size = new System.Drawing.Size(100, 22);
-            this.PagotextBox.TabIndex = 11;
             // 
             // label2
             // 
@@ -163,14 +155,6 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Miembro";
             // 
-            // ImportetextBox
-            // 
-            this.ImportetextBox.Location = new System.Drawing.Point(50, 156);
-            this.ImportetextBox.Name = "ImportetextBox";
-            this.ImportetextBox.ReadOnly = true;
-            this.ImportetextBox.Size = new System.Drawing.Size(100, 22);
-            this.ImportetextBox.TabIndex = 14;
-            // 
             // Agregarbutton
             // 
             this.Agregarbutton.Location = new System.Drawing.Point(350, 257);
@@ -184,7 +168,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(80, 136);
+            this.label4.Location = new System.Drawing.Point(207, 187);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 17);
             this.label4.TabIndex = 16;
@@ -193,7 +177,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(72, 184);
+            this.label5.Location = new System.Drawing.Point(69, 187);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 17);
             this.label5.TabIndex = 17;
@@ -202,7 +186,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(197, 136);
+            this.label6.Location = new System.Drawing.Point(84, 130);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 17);
             this.label6.TabIndex = 18;
@@ -222,7 +206,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(307, 94);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 142);
+            this.pictureBox1.Size = new System.Drawing.Size(186, 157);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -235,6 +219,7 @@
             this.Eliminarjbutton.TabIndex = 21;
             this.Eliminarjbutton.Text = "Eliminar Juego";
             this.Eliminarjbutton.UseVisualStyleBackColor = true;
+            this.Eliminarjbutton.Click += new System.EventHandler(this.Eliminarjbutton_Click);
             // 
             // Eliminarbutton
             // 
@@ -289,11 +274,60 @@
             // 
             this.RentaerrorProvider.ContainerControl = this;
             // 
+            // PagonumericUpDown
+            // 
+            this.PagonumericUpDown.Location = new System.Drawing.Point(42, 150);
+            this.PagonumericUpDown.Maximum = new decimal(new int[] {
+            -1486618625,
+            232830643,
+            0,
+            0});
+            this.PagonumericUpDown.Name = "PagonumericUpDown";
+            this.PagonumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.PagonumericUpDown.TabIndex = 27;
+            this.PagonumericUpDown.ValueChanged += new System.EventHandler(this.PagonumericUpDown_ValueChanged);
+            // 
+            // ImportenumericUpDown
+            // 
+            this.ImportenumericUpDown.Location = new System.Drawing.Point(179, 207);
+            this.ImportenumericUpDown.Maximum = new decimal(new int[] {
+            1874919423,
+            2328306,
+            0,
+            0});
+            this.ImportenumericUpDown.Name = "ImportenumericUpDown";
+            this.ImportenumericUpDown.ReadOnly = true;
+            this.ImportenumericUpDown.Size = new System.Drawing.Size(120, 22);
+            this.ImportenumericUpDown.TabIndex = 28;
+            this.ImportenumericUpDown.ValueChanged += new System.EventHandler(this.ImportenumericUpDown_ValueChanged);
+            // 
+            // DevueltanumericUpDown
+            // 
+            this.DevueltanumericUpDown.Location = new System.Drawing.Point(42, 207);
+            this.DevueltanumericUpDown.Maximum = new decimal(new int[] {
+            -1530494977,
+            232830,
+            0,
+            0});
+            this.DevueltanumericUpDown.Minimum = new decimal(new int[] {
+            1874919423,
+            2328306,
+            0,
+            -2147483648});
+            this.DevueltanumericUpDown.Name = "DevueltanumericUpDown";
+            this.DevueltanumericUpDown.ReadOnly = true;
+            this.DevueltanumericUpDown.Size = new System.Drawing.Size(117, 22);
+            this.DevueltanumericUpDown.TabIndex = 29;
+            this.DevueltanumericUpDown.ValueChanged += new System.EventHandler(this.DevueltanumericUpDown_ValueChanged);
+            // 
             // RegistroRenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 581);
+            this.Controls.Add(this.DevueltanumericUpDown);
+            this.Controls.Add(this.ImportenumericUpDown);
+            this.Controls.Add(this.PagonumericUpDown);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -306,11 +340,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Agregarbutton);
-            this.Controls.Add(this.ImportetextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.PagotextBox);
-            this.Controls.Add(this.DevueltatextBox);
             this.Controls.Add(this.DevueltadateTimePicker);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FechadateTimePicker);
@@ -325,6 +356,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.RentanumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RentaerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PagonumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImportenumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DevueltanumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,11 +374,8 @@
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker DevueltadateTimePicker;
-        private System.Windows.Forms.TextBox DevueltatextBox;
-        private System.Windows.Forms.TextBox PagotextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox ImportetextBox;
         private System.Windows.Forms.Button Agregarbutton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -358,5 +389,8 @@
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ErrorProvider RentaerrorProvider;
+        private System.Windows.Forms.NumericUpDown PagonumericUpDown;
+        private System.Windows.Forms.NumericUpDown DevueltanumericUpDown;
+        private System.Windows.Forms.NumericUpDown ImportenumericUpDown;
     }
 }

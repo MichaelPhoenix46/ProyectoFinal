@@ -21,7 +21,42 @@ namespace ProyectoFinal.UI.Registros
         {
             InitializeComponent();
             LlenarComboBox();
+            DevueltadateTimePicker.Value = DateTime.Now.AddDays(7);
         }
+
+
+        private bool Validar()
+        {
+
+            bool paso = true;
+            if (string.IsNullOrWhiteSpace(MiembrocomboBox.Text) || string.IsNullOrWhiteSpace(MiembrocomboBox.Text))
+            {
+                RentaerrorProvider.SetError(MiembrocomboBox, "Campo Vacio ");
+                paso = false;
+            }
+            /*if ((FechadateTimePicker.Value >= DateTime.Today) || FechadateTimePicker.Value <= DateTime.Today))
+            {
+                RentaerrorProvider.SetError(FechadateTimePicker, "Campo Vacio");
+                paso = false;
+            }*/
+            if (PagonumericUpDown.Value<=0) 
+            {
+                RentaerrorProvider.SetError(PagonumericUpDown, "El pago no deberia ser 0 o negativo");
+                paso = false;
+            }
+            if (ImportenumericUpDown.Value<=0) 
+            {
+                RentaerrorProvider.SetError(ImportenumericUpDown, "Debe agregar al menos un detalle");
+                paso = false;
+            }
+            if ((string.IsNullOrWhiteSpace(JuegocomboBox.Text)) || (string.IsNullOrEmpty(JuegocomboBox.Text)))
+            {
+                RentaerrorProvider.SetError(JuegocomboBox, "Debe seleccionar al menos un juego");
+                paso = false;
+            }
+            return paso;
+        }
+
 
         private void LlenarComboBox()
         {
@@ -44,45 +79,57 @@ namespace ProyectoFinal.UI.Registros
             FechadateTimePicker.Value = DateTime.Now;
             MiembrocomboBox.Text = string.Empty;
             DevueltadateTimePicker.Value = DateTime.Today.AddDays(7);
-            ImportetextBox.Text = string.Empty;
-            PagotextBox.Text = string.Empty;
-            DevueltatextBox.Text = string.Empty;
+            ImportenumericUpDown.Value = 0;
+            PagonumericUpDown.Value = 0;
+            DevueltanumericUpDown.Value = 0;
             JuegocomboBox.Text = string.Empty;
+            DetalledataGridView.DataSource = null;
 
         }
+
+        public void LlenarCampos(Renta renta)
+        {
+            DevueltadateTimePicker.Value = renta.FechaDevuelta;
+            FechadateTimePicker.Value = renta.FechaRegistro;
+            DevueltanumericUpDown.Value = renta.Devuelta;
+            PagonumericUpDown.Value = renta.Pago;
+            ImportenumericUpDown.Value = renta.Importe;
+
+        }
+
         private Renta LlenaClase()
         {
-            Renta renta = new Renta();
-            renta.Pago = Convert.ToDecimal(PagotextBox.Text);
-            renta.Devuelta = Convert.ToDecimal(DevueltatextBox.Text);
-            renta.FechaRegistro = FechadateTimePicker.Value;
-            renta.FechaDevuelta = DevueltadateTimePicker.Value;
-            renta.MiembroId = Convert.ToInt32(MiembrocomboBox.SelectedValue);
-            renta.RentaId = Convert.ToInt32(RentanumericUpDown.Value);
+            Renta renta = new Renta
+            {
+                Pago = PagonumericUpDown.Value,
+                Devuelta = DevueltanumericUpDown.Value,
+                FechaRegistro = FechadateTimePicker.Value,
+                FechaDevuelta = DevueltadateTimePicker.Value,
+                MiembroId = Convert.ToInt32(MiembrocomboBox.SelectedValue),
+                RentaId = Convert.ToInt32(RentanumericUpDown.Value),
+                Importe = ImportenumericUpDown.Value,
+                Detalles = this.Detalle
+            };
+
+            /*foreach (DataGridViewRow item in DetalledataGridView.Rows)
+            {
+
+                Detalle.Add
+                (Convert.ToInt32(item.Cells["DetalleId"].Value),
+                renta.RentaId,
+                Convert.ToInt32(item.Cells["VideoJuegoId"].Value),
+                Convert.ToString(item.Cells["Titulo"].Value),
+                Convert.ToString(item.Cells["descripcion"].Value),
+                ToInt(item.Cells["cantidad"].Value),
+                ToDecimal(item.Cells["monto"].Value)
+                  );
 
 
+            }*/
             return renta;
+
         }
 
-        private bool Validar()
-        {
-            bool paso = true;
-
-            if (string.IsNullOrEmpty(PagotextBox.Text))
-            {
-                RentaerrorProvider.SetError(PagotextBox,
-                    "Llenar Campo Pago");
-                paso = false;
-            }
-            if (string.IsNullOrEmpty(MiembrocomboBox.Text))
-            {
-                RentaerrorProvider.SetError(MiembrocomboBox,
-                    "Llenar Campo Miembro");
-                paso = false;
-            }
-
-            return paso;
-        }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
@@ -164,10 +211,11 @@ namespace ProyectoFinal.UI.Registros
             if (renta != null)
             {
                 MiembrocomboBox.SelectedValue = renta.MiembroId;
-                DevueltadateTimePicker.Value = renta.FechaDevuelta;  
-                PagotextBox.Text = renta.Pago.ToString();
-                DevueltatextBox.Text = renta.Devuelta.ToString() ;
+                DevueltadateTimePicker.Value = renta.FechaDevuelta;
+                PagonumericUpDown.Value = renta.Pago;
+                DevueltanumericUpDown.Value = renta.Devuelta;
                 FechadateTimePicker.Value = renta.FechaRegistro;
+                CargarGrid();
 
             }
             else
@@ -189,15 +237,7 @@ namespace ProyectoFinal.UI.Registros
             }
             return paso;
         }
-        private void EliminarButton_Click(object sender, EventArgs e)
-        {
-            if (DetalledataGridView.Rows.Count > 0 && DetalledataGridView.CurrentRow != null)
-            {
-                Detalle.RemoveAt(Index);
-                CargarGrid();
-                Index = -1;
-            }
-        }
+
 
         private void DetalledataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -213,18 +253,50 @@ namespace ProyectoFinal.UI.Registros
             this.Detalle.Add(new RentaDetalle(
                 0,
                 rentaId: (int)RentanumericUpDown.Value,
-                videoJuegoId: (int)JuegocomboBox.SelectedValue
+                videoJuegoId: (int)JuegocomboBox.SelectedValue,
+                titulo:(string) BLL.RentaBLL.RetornarNombre(JuegocomboBox.Text)
 
-                ));
+                )
+                
+                );
+            
             RentaerrorProvider.Clear();
             CargarGrid();
-            foreach (var item in Detalle)
+
+            Detalle.Count();
+            ImportenumericUpDown.Text = (Convert.ToString(Detalle.Count() * 50));
+        }
+
+        private void Eliminarjbutton_Click(object sender, EventArgs e)
+        {
+            if (DetalledataGridView.Rows.Count > 0 && DetalledataGridView.CurrentRow != null)
             {
-                ImportetextBox.Text += Convert.ToDecimal(50);
+                Detalle.RemoveAt(DetalledataGridView.CurrentRow.Index);
+                CargarGrid();
                 
             }
+            ImportenumericUpDown.Text = Convert.ToString(Detalle.Count() * 50);
+           
+        }
+
+
+        private void PagonumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            DevueltanumericUpDown.Value = PagonumericUpDown.Value - ImportenumericUpDown.Value;
+        }
+
+        private void DevueltanumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
             
         }
+
+        private void ImportenumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            DevueltanumericUpDown.Value = PagonumericUpDown.Value - ImportenumericUpDown.Value;
+        }
+
+
     }
 }
+
 

@@ -119,8 +119,8 @@
             this.FiltrocomboBox.Items.AddRange(new object[] {
             "id",
             "Nombre",
-            "Direccion",
             "Cedula",
+            "Direccion",
             "Telefono",
             "Listar Todo"});
             this.FiltrocomboBox.Location = new System.Drawing.Point(42, 28);

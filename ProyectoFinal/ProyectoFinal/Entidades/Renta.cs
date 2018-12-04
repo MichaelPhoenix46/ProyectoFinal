@@ -37,9 +37,9 @@ namespace ProyectoFinal.Entidades
 
         }
 
-        public void AgregarDetalle(int detalleId, int rentaId, int videoJuegoId, string titulo, int cantidad, decimal importe)
+        public void AgregarDetalle(int detalleId, int rentaId, int videoJuegoId,string titulo)
         {
-            Detalles.Add(new RentaDetalle(detalleId, rentaId, videoJuegoId));
+            Detalles.Add(new RentaDetalle(detalleId, rentaId, videoJuegoId,titulo));
 
         }
 

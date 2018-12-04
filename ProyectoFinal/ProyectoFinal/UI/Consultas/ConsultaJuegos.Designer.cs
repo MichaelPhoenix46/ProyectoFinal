@@ -120,10 +120,12 @@
             this.FiltrocomboBox.FormattingEnabled = true;
             this.FiltrocomboBox.Items.AddRange(new object[] {
             "id",
-            "Nombre",
-            "Direccion",
-            "Cedula",
-            "Telefono",
+            "Titulo",
+            "Descripcion",
+            "Plataforma",
+            "Lanzamiento",
+            "Genero",
+            "Cantidad Ejemplares",
             "Listar Todo"});
             this.FiltrocomboBox.Location = new System.Drawing.Point(42, 25);
             this.FiltrocomboBox.Margin = new System.Windows.Forms.Padding(4);

@@ -53,16 +53,8 @@ namespace ProyectoFinal.UI.Consultas
                 case 5://Genero
                     filtro = x => x.Genero.Contains(CriteriotextBox.Text)
                    && (x.FechaRegistro >= DesdedateTimePicker.Value && x.FechaRegistro <= HastadateTimePicker.Value);
-                    break;
-                case 6://Genero
-                    filtro = x => x.Desarrolladores.Contains(CriteriotextBox.Text)
-                   && (x.FechaRegistro >= DesdedateTimePicker.Value && x.FechaRegistro <= HastadateTimePicker.Value);
-                    break;
-                case 7://Genero
-                    filtro = x => x.Desarrolladores.Contains(CriteriotextBox.Text)
-                   && (x.FechaRegistro >= DesdedateTimePicker.Value && x.FechaRegistro <= HastadateTimePicker.Value);
-                    break;
-                case 8://Cantidad de ejemplares
+                    break;       
+                case 6://Cantidad de ejemplares
                     filtro = x => x.CantidadEjemplares.Equals(Convert.ToInt32(CriteriotextBox))
                    && (x.FechaRegistro >= DesdedateTimePicker.Value && x.FechaRegistro <= HastadateTimePicker.Value);
                     break;

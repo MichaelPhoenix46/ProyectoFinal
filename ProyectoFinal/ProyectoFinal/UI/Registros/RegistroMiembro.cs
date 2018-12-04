@@ -165,5 +165,59 @@ namespace ProyectoFinal.UI.Registros
         {
             Limpiar();
         }
+
+        public static void SoloNumero(KeyPressEventArgs v)
+        {
+            if (Char.IsDigit(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (Char.IsControl(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (Char.IsSeparator(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else
+            {
+                v.Handled = true;
+                MessageBox.Show("Solo Números");
+            }
+        }
+
+        public static void SoloLetras(KeyPressEventArgs v)
+        {
+            if (Char.IsLetter(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (Char.IsSeparator(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else if (Char.IsControl(v.KeyChar))
+            {
+                v.Handled = false;
+            }
+            else
+            {
+                v.Handled = true;
+            }
+        }
+
+        private void TelefonoTelefonomaskedTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumero(e);
+        }
+        private void CedulamaskedTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloNumero(e);
+        }
+        private void NombretextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            SoloLetras(e);
+        }
     }
 }

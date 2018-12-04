@@ -119,9 +119,10 @@
             this.FiltrocomboBox.Items.AddRange(new object[] {
             "id",
             "Nombre",
-            "Direccion",
             "Cedula",
             "Telefono",
+            "Username",
+            "Tipo",
             "Listar Todo"});
             this.FiltrocomboBox.Location = new System.Drawing.Point(42, 28);
             this.FiltrocomboBox.Margin = new System.Windows.Forms.Padding(4);

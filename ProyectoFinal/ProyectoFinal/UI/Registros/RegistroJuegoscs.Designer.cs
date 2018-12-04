@@ -183,6 +183,7 @@
             // 
             // PlataformacomboBox
             // 
+            this.PlataformacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.PlataformacomboBox.FormattingEnabled = true;
             this.PlataformacomboBox.Items.AddRange(new object[] {
             "Pc",

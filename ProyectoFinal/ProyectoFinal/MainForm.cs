@@ -17,6 +17,7 @@ namespace ProyectoFinal
         public MainForm()
         {
             InitializeComponent();
+            
         }
 
         private void consultaDeJuegosToolStripMenuItem_Click(object sender, EventArgs e)

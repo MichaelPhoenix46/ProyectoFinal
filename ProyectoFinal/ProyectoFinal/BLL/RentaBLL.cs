@@ -80,9 +80,13 @@ namespace ProyectoFinal.BLL
                         string s = item.VideoJuego.Titulo;
                     }
                 }
-                contexto.Dispose();
+                
             }
             catch (Exception) { throw; }
+            finally
+            {
+                contexto.Dispose();
+            }
             return renta;
         }
 
@@ -149,5 +153,16 @@ namespace ProyectoFinal.BLL
             return usuario;
         }
 
+        public static string RetornarNombre(string nombre)
+        {
+            RepositorioBase<VideoJuego> repositorio = new RepositorioBase<VideoJuego>();
+            string descripcion = string.Empty;
+            var lista = repositorio.GetList(x => x.Titulo.Equals(nombre));
+            foreach (var item in lista)
+            {
+                descripcion = item.Titulo;
+            }
+            return descripcion;
+        }
     }
 }
