@@ -62,5 +62,11 @@ namespace ProyectoFinal
             ConsultaRentas c = new ConsultaRentas();
             c.Show();
         }
+
+        private void consultaDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaUsuarios c = new ConsultaUsuarios();
+            c.Show();
+        }
     }
 }
