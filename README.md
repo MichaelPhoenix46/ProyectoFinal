@@ -4,4 +4,5 @@ Este proyecto esta basado en la tienda de renta de peliculas y videojuegos "Mr. 
 de videojuegos.
 
 Nombre de usuario por defecto:"Admin"("A" mayuscula)
+
 Contraseña por defecto:"123456"
