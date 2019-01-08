@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroJuegoscs));
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -76,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 66);
+            this.label3.Location = new System.Drawing.Point(30, 90);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 52;
@@ -93,41 +94,51 @@
             // 
             // Eliminarbutton
             // 
+            this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
             this.Eliminarbutton.Location = new System.Drawing.Point(318, 331);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(75, 54);
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 71);
             this.Eliminarbutton.TabIndex = 50;
             this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click_1);
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(183, 331);
+            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Guardarbutton.Location = new System.Drawing.Point(176, 331);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(75, 54);
+            this.Guardarbutton.Size = new System.Drawing.Size(75, 71);
             this.Guardarbutton.TabIndex = 49;
             this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Nuevobutton
             // 
+            this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
             this.Nuevobutton.Location = new System.Drawing.Point(31, 331);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(75, 54);
+            this.Nuevobutton.Size = new System.Drawing.Size(75, 71);
             this.Nuevobutton.TabIndex = 48;
             this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Buscarbutton
             // 
+            this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Buscarbutton.Location = new System.Drawing.Point(218, 9);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(75, 45);
+            this.Buscarbutton.Size = new System.Drawing.Size(75, 57);
             this.Buscarbutton.TabIndex = 47;
             this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
@@ -143,9 +154,9 @@
             // 
             // TitulotextBox
             // 
-            this.TitulotextBox.Location = new System.Drawing.Point(108, 63);
+            this.TitulotextBox.Location = new System.Drawing.Point(108, 87);
             this.TitulotextBox.Name = "TitulotextBox";
-            this.TitulotextBox.Size = new System.Drawing.Size(290, 22);
+            this.TitulotextBox.Size = new System.Drawing.Size(285, 22);
             this.TitulotextBox.TabIndex = 44;
             // 
             // JuegonumericUpDown
@@ -158,7 +169,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 106);
+            this.label1.Location = new System.Drawing.Point(15, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 17);
             this.label1.TabIndex = 60;
@@ -166,7 +177,7 @@
             // 
             // DescripciontextBox
             // 
-            this.DescripciontextBox.Location = new System.Drawing.Point(108, 103);
+            this.DescripciontextBox.Location = new System.Drawing.Point(108, 115);
             this.DescripciontextBox.Multiline = true;
             this.DescripciontextBox.Name = "DescripciontextBox";
             this.DescripciontextBox.Size = new System.Drawing.Size(285, 57);
@@ -196,7 +207,7 @@
             "Nintendo 3DS"});
             this.PlataformacomboBox.Location = new System.Drawing.Point(123, 178);
             this.PlataformacomboBox.Name = "PlataformacomboBox";
-            this.PlataformacomboBox.Size = new System.Drawing.Size(183, 24);
+            this.PlataformacomboBox.Size = new System.Drawing.Size(229, 24);
             this.PlataformacomboBox.TabIndex = 62;
             // 
             // label9
@@ -212,7 +223,7 @@
             // 
             this.GenerotextBox.Location = new System.Drawing.Point(123, 248);
             this.GenerotextBox.Name = "GenerotextBox";
-            this.GenerotextBox.Size = new System.Drawing.Size(183, 22);
+            this.GenerotextBox.Size = new System.Drawing.Size(229, 22);
             this.GenerotextBox.TabIndex = 63;
             // 
             // LanzamientodateTimePicker
@@ -221,14 +232,14 @@
             this.LanzamientodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.LanzamientodateTimePicker.Location = new System.Drawing.Point(123, 213);
             this.LanzamientodateTimePicker.Name = "LanzamientodateTimePicker";
-            this.LanzamientodateTimePicker.Size = new System.Drawing.Size(183, 22);
+            this.LanzamientodateTimePicker.Size = new System.Drawing.Size(229, 22);
             this.LanzamientodateTimePicker.TabIndex = 65;
             // 
             // CantidadnumericUpDown
             // 
             this.CantidadnumericUpDown.Location = new System.Drawing.Point(123, 291);
             this.CantidadnumericUpDown.Name = "CantidadnumericUpDown";
-            this.CantidadnumericUpDown.Size = new System.Drawing.Size(183, 22);
+            this.CantidadnumericUpDown.Size = new System.Drawing.Size(229, 22);
             this.CantidadnumericUpDown.TabIndex = 66;
             // 
             // label5

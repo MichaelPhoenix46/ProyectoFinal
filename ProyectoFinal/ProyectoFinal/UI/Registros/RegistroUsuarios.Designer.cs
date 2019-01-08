@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroUsuarios));
             this.UsuarionumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.NombretextBox = new System.Windows.Forms.TextBox();
             this.NombreUstextBox = new System.Windows.Forms.TextBox();
@@ -99,7 +100,7 @@
             this.AdminradioButton.AutoSize = true;
             this.AdminradioButton.Location = new System.Drawing.Point(6, 16);
             this.AdminradioButton.Name = "AdminradioButton";
-            this.AdminradioButton.Size = new System.Drawing.Size(68, 21);
+            this.AdminradioButton.Size = new System.Drawing.Size(65, 21);
             this.AdminradioButton.TabIndex = 8;
             this.AdminradioButton.TabStop = true;
             this.AdminradioButton.Text = "Admin";
@@ -110,7 +111,7 @@
             this.UsuarioradioButton.AutoSize = true;
             this.UsuarioradioButton.Location = new System.Drawing.Point(137, 16);
             this.UsuarioradioButton.Name = "UsuarioradioButton";
-            this.UsuarioradioButton.Size = new System.Drawing.Size(78, 21);
+            this.UsuarioradioButton.Size = new System.Drawing.Size(75, 21);
             this.UsuarioradioButton.TabIndex = 9;
             this.UsuarioradioButton.TabStop = true;
             this.UsuarioradioButton.Text = "Usuario";
@@ -127,41 +128,52 @@
             // 
             // Buscarbutton
             // 
+            this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Buscarbutton.Location = new System.Drawing.Point(218, 8);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(75, 50);
             this.Buscarbutton.TabIndex = 11;
             this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Location = new System.Drawing.Point(12, 290);
+            this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Nuevobutton.Location = new System.Drawing.Point(12, 299);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(75, 54);
+            this.Nuevobutton.Size = new System.Drawing.Size(75, 75);
             this.Nuevobutton.TabIndex = 12;
             this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Location = new System.Drawing.Point(169, 290);
+            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Guardarbutton.Location = new System.Drawing.Point(169, 299);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(75, 54);
+            this.Guardarbutton.Size = new System.Drawing.Size(75, 75);
             this.Guardarbutton.TabIndex = 13;
             this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(326, 290);
+            this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
+            this.Eliminarbutton.Location = new System.Drawing.Point(326, 299);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(75, 54);
+            this.Eliminarbutton.Size = new System.Drawing.Size(75, 75);
             this.Eliminarbutton.TabIndex = 14;
             this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
@@ -263,7 +275,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 361);
+            this.ClientSize = new System.Drawing.Size(426, 378);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.TelefonomaskedTextBox);

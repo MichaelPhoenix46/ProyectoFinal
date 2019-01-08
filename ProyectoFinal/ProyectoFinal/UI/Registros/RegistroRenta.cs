@@ -322,6 +322,11 @@ namespace ProyectoFinal.UI.Registros
         {
 
         }
+
+        private void RegistroRenta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

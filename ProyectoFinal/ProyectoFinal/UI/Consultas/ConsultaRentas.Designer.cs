@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaRentas));
             this.ReporteButton = new System.Windows.Forms.Button();
             this.Consultabutton = new System.Windows.Forms.Button();
             this.FiltrocomboBox = new System.Windows.Forms.ComboBox();
@@ -46,26 +47,29 @@
             // 
             this.ReporteButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ReporteButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReporteButton.Image = ((System.Drawing.Image)(resources.GetObject("ReporteButton.Image")));
+            this.ReporteButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ReporteButton.Location = new System.Drawing.Point(21, 388);
             this.ReporteButton.Margin = new System.Windows.Forms.Padding(4);
             this.ReporteButton.Name = "ReporteButton";
             this.ReporteButton.Size = new System.Drawing.Size(169, 85);
             this.ReporteButton.TabIndex = 40;
             this.ReporteButton.Text = "Imprimir";
+            this.ReporteButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ReporteButton.UseVisualStyleBackColor = true;
             // 
             // Consultabutton
             // 
             this.Consultabutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Consultabutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Consultabutton.Image = ((System.Drawing.Image)(resources.GetObject("Consultabutton.Image")));
             this.Consultabutton.Location = new System.Drawing.Point(618, 13);
             this.Consultabutton.Margin = new System.Windows.Forms.Padding(4);
             this.Consultabutton.Name = "Consultabutton";
             this.Consultabutton.Size = new System.Drawing.Size(169, 98);
             this.Consultabutton.TabIndex = 39;
             this.Consultabutton.Text = "Consultar";
+            this.Consultabutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Consultabutton.UseVisualStyleBackColor = true;
             // 
             // FiltrocomboBox

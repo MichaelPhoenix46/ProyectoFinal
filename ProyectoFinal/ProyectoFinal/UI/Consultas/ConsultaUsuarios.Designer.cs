@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaUsuarios));
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -88,26 +89,29 @@
             // 
             this.ReporteButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ReporteButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReporteButton.Image = ((System.Drawing.Image)(resources.GetObject("ReporteButton.Image")));
+            this.ReporteButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.ReporteButton.Location = new System.Drawing.Point(21, 397);
             this.ReporteButton.Margin = new System.Windows.Forms.Padding(4);
             this.ReporteButton.Name = "ReporteButton";
             this.ReporteButton.Size = new System.Drawing.Size(169, 85);
             this.ReporteButton.TabIndex = 64;
             this.ReporteButton.Text = "Imprimir";
+            this.ReporteButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ReporteButton.UseVisualStyleBackColor = true;
             // 
             // Consultabutton
             // 
             this.Consultabutton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Consultabutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Consultabutton.Image = ((System.Drawing.Image)(resources.GetObject("Consultabutton.Image")));
             this.Consultabutton.Location = new System.Drawing.Point(618, 12);
             this.Consultabutton.Margin = new System.Windows.Forms.Padding(4);
             this.Consultabutton.Name = "Consultabutton";
             this.Consultabutton.Size = new System.Drawing.Size(169, 98);
             this.Consultabutton.TabIndex = 63;
             this.Consultabutton.Text = "Consultar";
+            this.Consultabutton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Consultabutton.UseVisualStyleBackColor = true;
             this.Consultabutton.Click += new System.EventHandler(this.Consultabutton_Click);
             // 
