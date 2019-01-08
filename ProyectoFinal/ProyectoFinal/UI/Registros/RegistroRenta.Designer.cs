@@ -33,7 +33,6 @@
             this.JuegocomboBox = new System.Windows.Forms.ComboBox();
             this.MiembrocomboBox = new System.Windows.Forms.ComboBox();
             this.DetalledataGridView = new System.Windows.Forms.DataGridView();
-            this.UsuarioLabel = new System.Windows.Forms.Label();
             this.RentanumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,6 +55,8 @@
             this.PagonumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.ImportenumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.DevueltanumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.CantidadtextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DetalledataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RentanumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,15 +92,6 @@
             this.DetalledataGridView.RowTemplate.Height = 24;
             this.DetalledataGridView.Size = new System.Drawing.Size(465, 150);
             this.DetalledataGridView.TabIndex = 3;
-            // 
-            // UsuarioLabel
-            // 
-            this.UsuarioLabel.AutoSize = true;
-            this.UsuarioLabel.Location = new System.Drawing.Point(304, 74);
-            this.UsuarioLabel.Name = "UsuarioLabel";
-            this.UsuarioLabel.Size = new System.Drawing.Size(55, 17);
-            this.UsuarioLabel.TabIndex = 4;
-            this.UsuarioLabel.Text = "usuario";
             // 
             // RentanumericUpDown
             // 
@@ -157,7 +149,7 @@
             // 
             // Agregarbutton
             // 
-            this.Agregarbutton.Location = new System.Drawing.Point(350, 257);
+            this.Agregarbutton.Location = new System.Drawing.Point(417, 258);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(76, 31);
             this.Agregarbutton.TabIndex = 15;
@@ -206,7 +198,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(307, 94);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 157);
+            this.pictureBox1.Size = new System.Drawing.Size(186, 135);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -320,11 +312,30 @@
             this.DevueltanumericUpDown.TabIndex = 29;
             this.DevueltanumericUpDown.ValueChanged += new System.EventHandler(this.DevueltanumericUpDown_ValueChanged);
             // 
+            // CantidadtextBox
+            // 
+            this.CantidadtextBox.Location = new System.Drawing.Point(340, 266);
+            this.CantidadtextBox.Name = "CantidadtextBox";
+            this.CantidadtextBox.Size = new System.Drawing.Size(51, 22);
+            this.CantidadtextBox.TabIndex = 30;
+            this.CantidadtextBox.TextChanged += new System.EventHandler(this.CantidadtextBox_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(337, 246);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 17);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Cantidad";
+            // 
             // RegistroRenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 581);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.CantidadtextBox);
             this.Controls.Add(this.DevueltanumericUpDown);
             this.Controls.Add(this.ImportenumericUpDown);
             this.Controls.Add(this.PagonumericUpDown);
@@ -346,7 +357,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.RentanumericUpDown);
-            this.Controls.Add(this.UsuarioLabel);
             this.Controls.Add(this.DetalledataGridView);
             this.Controls.Add(this.MiembrocomboBox);
             this.Controls.Add(this.JuegocomboBox);
@@ -369,7 +379,6 @@
         private System.Windows.Forms.ComboBox JuegocomboBox;
         private System.Windows.Forms.ComboBox MiembrocomboBox;
         private System.Windows.Forms.DataGridView DetalledataGridView;
-        private System.Windows.Forms.Label UsuarioLabel;
         private System.Windows.Forms.NumericUpDown RentanumericUpDown;
         private System.Windows.Forms.DateTimePicker FechadateTimePicker;
         private System.Windows.Forms.Label label1;
@@ -392,5 +401,7 @@
         private System.Windows.Forms.NumericUpDown PagonumericUpDown;
         private System.Windows.Forms.NumericUpDown DevueltanumericUpDown;
         private System.Windows.Forms.NumericUpDown ImportenumericUpDown;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox CantidadtextBox;
     }
 }

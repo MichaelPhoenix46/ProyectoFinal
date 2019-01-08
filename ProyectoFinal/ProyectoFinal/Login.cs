@@ -51,7 +51,7 @@ namespace ProyectoFinal
                 MessageBox.Show("Campos Vacios!!");
                 return;
             }
-            if ((UsertextBox.Text == "Admin") && (passtextBox.Text == "123456"))
+            if ((UsertextBox.Text == "admin") && (passtextBox.Text == "123456"))
             {
 
 

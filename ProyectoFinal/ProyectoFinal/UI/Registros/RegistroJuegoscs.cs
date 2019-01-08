@@ -165,12 +165,12 @@ namespace ProyectoFinal.UI.Registros
 
             if (juego != null)
             {
-                MessageBox.Show("Miembro Encontrado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Juego Encontrado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LlenarCampos(juego);
             }
             else
             {
-                MessageBox.Show("Miembro no Exite", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Juego no Exite", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

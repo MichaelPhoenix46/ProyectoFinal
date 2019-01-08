@@ -7,6 +7,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ProyectoFinal.BLL
 {
@@ -21,11 +22,14 @@ namespace ProyectoFinal.BLL
             {
                 if (contexto.renta.Add(renta) != null)
                 {
+
                     foreach (var item in renta.Detalles)
                     {
 
                         contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares = contexto.videoJuego.Find(item.VideoJuegoId).CantidadEjemplares - 1;
+
                     }
+
                     contexto.SaveChanges();
                     paso = true;
                 }

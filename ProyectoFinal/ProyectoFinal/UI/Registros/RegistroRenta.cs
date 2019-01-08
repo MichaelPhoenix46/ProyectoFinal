@@ -1,4 +1,5 @@
 ﻿using ProyectoFinal.BLL;
+using ProyectoFinal.DAL;
 using ProyectoFinal.Entidades;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,7 +29,7 @@ namespace ProyectoFinal.UI.Registros
 
         private bool Validar()
         {
-
+            
             bool paso = true;
             if (string.IsNullOrWhiteSpace(MiembrocomboBox.Text) || string.IsNullOrWhiteSpace(MiembrocomboBox.Text))
             {
@@ -44,16 +46,28 @@ namespace ProyectoFinal.UI.Registros
                 RentaerrorProvider.SetError(PagonumericUpDown, "El pago no deberia ser 0 o negativo");
                 paso = false;
             }
-            if (ImportenumericUpDown.Value<=0) 
+            if (ImportenumericUpDown.Value==0) 
             {
                 RentaerrorProvider.SetError(ImportenumericUpDown, "Debe agregar al menos un detalle");
                 paso = false;
             }
+            if(DevueltanumericUpDown.Value < 0)
+            {
+                RentaerrorProvider.SetError(DevueltanumericUpDown, "La devuelta no debe ser menor que 0");
+                paso = false;
+            }
+
+
             if ((string.IsNullOrWhiteSpace(JuegocomboBox.Text)) || (string.IsNullOrEmpty(JuegocomboBox.Text)))
             {
                 RentaerrorProvider.SetError(JuegocomboBox, "Debe seleccionar al menos un juego");
                 paso = false;
             }
+
+
+
+
+
             return paso;
         }
 
@@ -64,6 +78,8 @@ namespace ProyectoFinal.UI.Registros
             JuegocomboBox.DataSource = juegorep.GetList(c => true);
             JuegocomboBox.ValueMember = "VideoJuegoId";
             JuegocomboBox.DisplayMember = "Titulo";
+         
+
 
             RepositorioBase<Miembro> miembrorep = new RepositorioBase<Miembro>();
             MiembrocomboBox.DataSource = miembrorep.GetList(x => true);
@@ -226,6 +242,7 @@ namespace ProyectoFinal.UI.Registros
         {
             DetalledataGridView.DataSource = null;
             DetalledataGridView.DataSource = Detalle;
+            
         }
 
         public bool ValidarRemover()
@@ -262,7 +279,7 @@ namespace ProyectoFinal.UI.Registros
             
             RentaerrorProvider.Clear();
             CargarGrid();
-
+            DetalledataGridView.Columns.Remove("VideoJuego");
             Detalle.Count();
             ImportenumericUpDown.Text = (Convert.ToString(Detalle.Count() * 50));
         }
@@ -285,6 +302,12 @@ namespace ProyectoFinal.UI.Registros
             DevueltanumericUpDown.Value = PagonumericUpDown.Value - ImportenumericUpDown.Value;
         }
 
+        private void PagonumericUpDown_KeyUp(object sender, KeyPressEventArgs e)
+        {
+            PagonumericUpDown_ValueChanged(this.PagonumericUpDown, new EventArgs());
+
+        }
+
         private void DevueltanumericUpDown_ValueChanged(object sender, EventArgs e)
         {
             
@@ -292,10 +315,13 @@ namespace ProyectoFinal.UI.Registros
 
         private void ImportenumericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            DevueltanumericUpDown.Value = PagonumericUpDown.Value - ImportenumericUpDown.Value;
+            
         }
 
+        private void CantidadtextBox_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 

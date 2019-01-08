@@ -19,6 +19,7 @@ namespace ProyectoFinal.Entidades
         public decimal Devuelta { get; set; }    //Esta devuelta se refiere a devuelta de dinero
         public decimal Pago { get; set; }
         public decimal Importe { get; set; }
+        
 
         /*[ForeignKey("MiembroId")]*/
         public virtual ICollection<RentaDetalle> Detalles { get; set; }
